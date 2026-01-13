@@ -1,0 +1,9 @@
+Explain pointers in C++ from scratch. Include what pointers are, how memory addresses work, pointer declaration, dereferencing, nullptr, and common mistakes beginners make. Use simple examples.
+Explain what a neural network is in Python terms. Focus on concepts (layers, weights, activation functions) and include a simple NumPy-based example, not TensorFlow or PyTorch.
+Explain how Django handles requests and responses. Cover URLs, views, templates, and middleware. Write this as concise study notes.
+Explain how to add a new item in Minecraft using Java modding. Include registering the item, adding textures, and making it appear in the creative inventory.
+Explain what a segmentation fault is and why it happens in C or C++. Include common causes and how to debug it.
+Explain Python lists, tuples, sets, and dictionaries. Compare them in a table and include when to use each.
+Explain how memory management differs between C++ and Python. Focus on stack vs heap, garbage collection, and manual vs automatic memory control.
+Explain how to add custom behavior to an item in Minecraft (e.g., right-click action or special effect when used). Provide a Java-based explanation.
+Explain pointers in C++ but write the notes as if teaching a beginner who only knows Python.
