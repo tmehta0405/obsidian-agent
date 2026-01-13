@@ -5,14 +5,41 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-with open("texts/questions.txt", 'r') as f:
-    lines = f.readlines()
-    question = random.choice(lines)
+def generatePrompts():
+    with open("texts/questions.txt", 'r', encoding='utf-8') as f:
+        history = f.read()
 
-print(question)
+    with open("texts/question_template.txt", 'r', encoding='utf-8') as f:
+        prompt = f.read().replace("{{HISTORY}}", history)
+
+    response = ollama.chat(
+        model=os.getenv("OLLAMA_MODEL"),
+        messages=[{
+            "role": "user",
+            "content": prompt
+        }]
+    )
+
+    with open('texts/questions.txt', 'a') as f:
+        f.write(response['message']['content'])
+
+
+def getQuestion():
+    with open("texts/questions.txt", 'r') as f:
+        lines = f.readlines()
+
+    lines = [line for line in lines if line.strip()]
+
+    question = random.choice(lines)
+    lines.remove(question)
+
+    with open("texts/questions.txt", 'w') as f:
+        f.writelines(lines)
+
+    return question
 
 def makeNote(question):
-    with open("texts/template.txt", 'r') as f:
+    with open("texts/obsidian_template.txt", 'r') as f:
         prompt = f.read().replace("{{TOPIC}}", question)
 
     print(prompt)
@@ -30,9 +57,9 @@ def makeNote(question):
 
 def addToVault(note):
     try:
-        title = (next((line.split(':', 1)[1].strip()
+        title = next((line.split(':', 1)[1].strip()
                          for line in note.split('\n')
-                         if line.startswith('title:')), None).lower().replace(" ", "_"))
+                         if line.startswith('title:')), None).lower().replace(" ", "_")
 
         location = next((line.split(':', 1)[1].strip()
                          for line in note.split('\n')
@@ -41,13 +68,19 @@ def addToVault(note):
         return
 
     path = f"test_vault/{location}"
-    os.makedirs(path, exist_ok=True)
+    os.makedirs(path.lower(), exist_ok=True)
 
     with open(f"{path}/{title}.md", "w") as f:
         f.write(note)
 
     return f"{title} added to {location}."
 
-note = makeNote(question)
-print(note)
-addToVault(note)
+for i in range(5):
+    note = makeNote(getQuestion())
+    print(note)
+    addToVault(note)
+
+generatePrompts()
+
+
+

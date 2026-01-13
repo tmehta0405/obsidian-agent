@@ -4,7 +4,7 @@ Rules:
 - Output VALID Markdown only
 - Use YAML frontmatter and for ONLY frontmatter
 - Frontmatter fields:
-  - title (short and sweet ex: Integral Tests)
+  - title (NO SLASHES and short ex: Integral Tests)
   - category (single path like Programming/C++ or Calculus/Integral_Tests)
   - tags (list)
 - Be concise but clear
