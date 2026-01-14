@@ -2,3 +2,4 @@
 .venv
 .env
 test_vault/*
+texts/questions.txt

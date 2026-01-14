@@ -20,12 +20,14 @@ def generatePrompts():
         }]
     )
 
-    with open('texts/questions.txt', 'a') as f:
+    print("Made questions")
+
+    with open('texts/questions.txt', 'a', encoding='utf-8') as f:
         f.write(response['message']['content'])
 
 
 def getQuestion():
-    with open("texts/questions.txt", 'r') as f:
+    with open("texts/questions.txt", 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
     lines = [line for line in lines if line.strip()]
@@ -33,13 +35,13 @@ def getQuestion():
     question = random.choice(lines)
     lines.remove(question)
 
-    with open("texts/questions.txt", 'w') as f:
+    with open("texts/questions.txt", 'w', encoding='utf-8') as f:
         f.writelines(lines)
 
     return question
 
 def makeNote(question):
-    with open("texts/obsidian_template.txt", 'r') as f:
+    with open("texts/obsidian_template.txt", 'r', encoding='utf-8') as f:
         prompt = f.read().replace("{{TOPIC}}", question)
 
     print(prompt)
@@ -67,19 +69,19 @@ def addToVault(note):
     except AttributeError:
         return
 
-    path = f"test_vault/{location}"
+    direc = "test_vault"
+    path = f"{direc}/{location}"
     os.makedirs(path.lower(), exist_ok=True)
 
-    with open(f"{path}/{title}.md", "w") as f:
+    with open(f"{path}/{title}.md", "w", encoding='utf-8') as f:
         f.write(note)
 
     return f"{title} added to {location}."
 
-for i in range(5):
-    note = makeNote(getQuestion())
-    print(note)
-    addToVault(note)
 
+note = makeNote(getQuestion())
+print(note)
+addToVault(note)
 generatePrompts()
 
 

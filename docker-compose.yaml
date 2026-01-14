@@ -1,0 +1,25 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+  agent:
+    build: .
+    container_name: obsidian-agent
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+      - OLLAMA_MODEL=llama3.2:3b
+    volumes:
+      - "C:/Users/tirth/OneDrive/Documents/Obsidian Vault/Obsidian Agent:/app/test_vault"
+      - ./texts:/app/texts
+    restart: unless-stopped
+
+volumes:
+  ollama_data:

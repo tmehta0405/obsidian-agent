@@ -4,19 +4,19 @@ Your output must be a stacked list of complete prompts, one per line, with NO se
 
 Each line must:
 - Start with "Explain ..."
-- Describe a SINGLE, clear topic
+- Describe a SINGLE, CLEAR, SPECIFIC topic
 - Include specific scope details (what to cover, constraints, examples, or comparisons)
 - Be suitable for generating structured study notes
 
 Topic domains to rotate between:
+- Statistics and Calculus IMPORTANT
+- Math with Programming IMPORTANT
 - C++ programming
 - Python programming
 - Machine learning in Python
 - Django / backend development
 - Java Programming
 - Minecraft Modding in 1.21.1 with Java
-- Statistics IMPORTANT
-- Math with Programming IMPORTANT
 
 Rules:
 1. ONLY GENERATE PROMPTS. Do not say anything like, "I can generate prompts for you."
