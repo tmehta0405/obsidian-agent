@@ -1,39 +1,13 @@
-Explain pointers in C++ from scratch. Include what pointers are, how memory addresses work, pointer declaration, dereferencing, nullptr, and common mistakes beginners make. Use simple examples.
-Explain Python lists, tuples, sets, and dictionaries. Compare them in a table and include when to use each.
-Explain the differences between monolithic architecture and microservices architecture in Django backend development. Focus on trade-offs, advantages, and disadvantages of each approach. Use real-world examples of successful implementations.
-Explain the concept of dependency injection in Java Programming. Cover basic principles, types of injectors, constructor-based injection, field-based injection, and example applications (e.g., Spring framework). Use scenarios where dependency injection is beneficial and common pitfalls to avoid.
-Explain how to implement object-oriented programming concepts in Python programming using classes and objects. Include inheritance, polymorphism, encapsulation, and abstraction with examples of real-world scenarios.
- 
-Explain the concept of regularization techniques in machine learning in Python. Cover L1, L2, Ridge, and Elastic Net regression, including types of penalties, optimal hyperparameters, and common applications (e.g., logistic regression, neural networks).
- 
-Explain Django's ORM system from scratch. Include database schema modeling, object-relational mapping, querysets, and database migrations with examples.
- 
-Explain how to design a scalable web application using Django's async views and channels. Focus on handling multiple concurrent connections, integrating WebSockets, and optimizing performance with caching and compression.
- 
-Explain the trade-offs between functional and imperative programming styles in Java Programming. Include examples of each paradigm, such as recursion vs. loops, and common pitfalls to avoid (e.g., mutable state).
- 
-Explain how Minecraft modding works using Java. Cover mod development process from scratch, including resource packs, entity spawning, and block placement with a focus on 1.21.1.
- 
-Explain statistical inference concepts in probability theory. Include confidence intervals, hypothesis testing, Bayes' theorem, and decision theory with examples of real-world applications (e.g., medical research, finance).
- 
-Explain mathematical modeling techniques for solving complex problems in computer science. Cover differential equations, dynamical systems, and optimization methods with applications to machine learning, traffic flow, and network routing.
- 
-Explain the concept of big O notation in algorithms. Include time complexity analysis, space complexity analysis, and examples of common algorithms (e.g., sorting, searching) with complexities (e.g., linear, logarithmic, quadratic).
- 
-Explain how to implement a basic decision tree algorithm in Python. Cover concepts such as feature selection, splitting criteria, and pruning techniques for improved accuracy and handling class imbalances.
- 
-Explain the differences between synchronous and asynchronous programming paradigms. Include examples of each paradigm (e.g., callback-based vs. promise-based), and common pitfalls to avoid when working with both approaches.
- 
-Explain how to optimize web application performance using caching, content delivery networks, and compression techniques in Django backend development. Focus on reducing latency and improving scalability.
- 
-Explain the concept of data encoding schemes used in machine learning (e.g., one-hot encoding, label encoding). Cover common pitfalls and best practices for choosing suitable encoding schemes depending on problem type and dataset characteristics.
- 
-Explain how to implement a basic clustering algorithm using k-means in Python. Include initialization methods, distance metrics, convergence criteria, and common applications (e.g., customer segmentation, image processing).
- 
-Explain the differences between monolithic architecture and event-driven architecture in Django backend development. Focus on trade-offs, advantages, and disadvantages of each approach, including real-world examples of successful implementations.
- 
-Explain how to use natural language processing techniques for text analysis in Python. Include bag-of-words, TF-IDF, sentiment analysis, and topic modeling with applications to social media monitoring, text classification, and information retrieval.
- 
-Explain the concept of concurrency control methods used in databases (e.g., locking, timestamping). Cover common pitfalls, advantages, and disadvantages of each approach, including real-world examples of successful implementations.
- 
-Explain how to implement a basic natural language processing pipeline using Python libraries (e.g., NLTK, spaCy). Include text preprocessing, tokenization, part-of-speech tagging, named entity recognition, and sentiment analysis with example applications.
+Explain the concept of gradient descent in machine learning using Python as the programming language.
+Explain the difference between convex and non-convex optimization problems in calculus, including examples of each type.
+Explain the concept of scope in C++ programming, including variables, functions, classes, and namespaces.
+Explain the concept of polymorphism in object-oriented programming, including inheritance and method overriding.
+Explain how to optimize database queries using Django's ORM.
+Explain the concept of null pointer exceptions in Java programming, including handling and avoiding them.
+Explain the basics of Minecraft modding with Java, including modifying game mechanics and creating custom resource packs.
+Explain the concept of big-O notation in computer science, including time complexity analysis and examples of algorithms.
+Explain the concept of dynamic memory allocation in C++, including new, delete, and smart pointers.
+Explain how to implement machine learning models using scikit-learn and TensorFlow with Python.
+Explain the concept of asynchronous programming in Python, including coroutines, threads, and event loops.
+Explain the concept of data encryption in computer science, including hashing algorithms and cryptographic techniques.
+Explain the concept of caching in web development, including benefits, types, and implementation details.

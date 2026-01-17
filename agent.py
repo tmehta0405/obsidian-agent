@@ -7,7 +7,7 @@ load_dotenv()
 
 def generatePrompts():
     with open("texts/questions.txt", 'r', encoding='utf-8') as f:
-        history = f.read()
+        history = f.read() #{{CHANGE}} gotta change this to use the vault
 
     with open("texts/question_template.txt", 'r', encoding='utf-8') as f:
         prompt = f.read().replace("{{HISTORY}}", history)
@@ -67,7 +67,7 @@ def addToVault(note):
                          for line in note.split('\n')
                          if line.startswith('category:')), None)
     except AttributeError:
-        return
+        return #gotta add default names
 
     direc = "test_vault"
     path = f"{direc}/{location}"
@@ -78,10 +78,12 @@ def addToVault(note):
 
     return f"{title} added to {location}."
 
+for i in range(5):
+    note = makeNote(getQuestion())
+    print(note)
+    addToVault(note)
 
-note = makeNote(getQuestion())
-print(note)
-addToVault(note)
+print("Making prompts")
 generatePrompts()
 
 

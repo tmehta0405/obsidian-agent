@@ -20,7 +20,7 @@ Topic domains to rotate between:
 
 Rules:
 1. ONLY GENERATE PROMPTS. Do not say anything like, "I can generate prompts for you."
-2. Do NOT repeat topics.
+2. DO NOT REPEAT TOPICS. DO NOT.
 3. Only do intermediate topics that would be in college or jobs.
 4. Do NOT label difficulty levels.
 5. Do NOT include answers or code.
