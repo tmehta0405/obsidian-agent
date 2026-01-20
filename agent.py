@@ -67,7 +67,8 @@ def addToVault(note):
                          for line in note.split('\n')
                          if line.startswith('category:')), None)
     except AttributeError:
-        return #gotta add default names
+        title = "note"
+        location = "uncategorized"
 
     direc = "test_vault"
     path = f"{direc}/{location}"
