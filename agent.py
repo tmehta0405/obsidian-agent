@@ -145,11 +145,11 @@ def addToVault(note):
     try:
         title = next((line.split(':', 1)[1].strip()
                       for line in note.split('\n')
-                      if line.startswith('title:')), None).lower().replace(" ", "_")
+                      if line.startswith('title:')), None).lower().replace(" ", "_").replace("/", "")
 
         location = next((line.split(':', 1)[1].strip()
                          for line in note.split('\n')
-                         if line.startswith('category:')), None)
+                         if line.startswith('category:')), None).replace(" ", "_")
     except AttributeError:
         title = "note"
         location = "uncategorized"
@@ -158,11 +158,15 @@ def addToVault(note):
     path = f"{direc}/{location}"
     os.makedirs(path.lower(), exist_ok=True)
 
-    with open(f"{path}/{title}.md", "w", encoding='utf-8') as f:
-        f.write(note)
+    try:
+        with open(f"{path}/{title}.md", "w", encoding='utf-8') as f:
+            f.write(note)
+    except FileNotFoundError as e:
+        return f"File not found error: {e}"
 
-    return f"{title} added to {location}."
 
+    print(f"wrote {path}/{title}.md", flush=True)
+    
 
 for i in range(5):
     note = makeNote(getQuestion())
