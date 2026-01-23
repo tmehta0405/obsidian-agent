@@ -167,11 +167,11 @@ def addToVault(note):
 
     print(f"wrote {path}/{title}.md", flush=True)
     
+while True:
+    for i in range(7):
+        note = makeNote(getQuestion())
+        print(note)
+        addToVault(note)
 
-for i in range(5):
-    note = makeNote(getQuestion())
-    print(note)
-    addToVault(note)
-
-print("Making prompts")
-generatePrompts()
+    print("Making prompts")
+    generatePrompts()
